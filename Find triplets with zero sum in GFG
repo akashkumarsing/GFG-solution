@@ -1,0 +1,31 @@
+class Solution
+{
+    // arr[]: input array
+    // n: size of the array
+    //Function to find triplets with zero sum.
+	public boolean findTriplets(int arr[] , int n)
+    {
+        //add code here.
+        Arrays.sort(arr);
+        
+       for(int i=0;i<arr.length;i++){
+           
+       
+         int lo=i+1;
+         int hi=n-1;
+         while(lo<hi){
+             int sum=arr[i]+arr[lo]+arr[hi];
+             
+             if(sum==0){
+                 return true;
+                 
+             }else if(sum<0){
+                lo++;                 
+             }else{
+                 hi--;
+             }
+         }
+       }
+       return false;
+    }
+}
