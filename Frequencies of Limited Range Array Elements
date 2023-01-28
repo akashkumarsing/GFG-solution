@@ -1,0 +1,31 @@
+
+     //    CURRECT ANS
+    //     HashMap<Integer,Integer> hm= new HashMap<>();
+    //     for(int val:arr){
+    //     hm.put(val,hm.getOrDefault(val,0)+1);
+    //     }
+        
+    //   for(int i=1;i<=n;i++){
+          
+    //       arr[i-1]=hm.getOrDefault(i,0);
+    //   }
+    
+    
+    
+    
+   //   CURRECCT ANS
+      
+         int k= Math.max(N,P);
+
+        int[] cnt=new int[k+1];
+
+        for(int i:arr){
+
+            cnt[i]++;
+
+        }
+
+        for(int j=0;j<N;j++){
+
+            arr[j]=cnt[j+1];
+        }
